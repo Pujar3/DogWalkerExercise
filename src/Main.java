@@ -4,9 +4,9 @@ import java.util.Scanner;
 
 public class Main {
     public static void main (String[] args) throws FileNotFoundException {
-        DogWalkCompany c = new DogWalkCompany();
-        System.out.println(c);
-        int hour = c.addDogs();
+        //DogWalkCompany c = new DogWalkCompany();
+        //System.out.println(c);
+/*        int hour = c.addDogs();
         System.out.println(c);
         DogWalker w = new DogWalker(4, c);
         System.out.println(w.walkDogs(hour) + " dogs walked.");
@@ -15,7 +15,7 @@ public class Main {
             c.addDogs();
         System.out.println(c);
         w = new DogWalker(3,c);
-        System.out.println("$" + w.dogWalkShift(7,10) + ".00 earned");
+        System.out.println("$" + w.dogWalkShift(7,10) + ".00 earned");*/
         System.out.println(read());
     }
     public static int read() throws FileNotFoundException {
@@ -34,7 +34,7 @@ public class Main {
             index++;
         }
         DogWalker[] walkers = new DogWalker[(int)Math.pow(10,4)];
-        f = new File("Walkers.txt");
+        f = new File("Walker.txt");
         s = new Scanner(f);
         index = 0;
         while (s.hasNextLine()) {

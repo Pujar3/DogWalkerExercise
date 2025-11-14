@@ -16,6 +16,7 @@ public class Main {
         System.out.println(c);
         w = new DogWalker(3,c);
         System.out.println("$" + w.dogWalkShift(7,10) + ".00 earned");*/
+
         System.out.println(read());
     }
     public static int read() throws FileNotFoundException {
@@ -24,17 +25,18 @@ public class Main {
         File f = new File("Companies.txt");
         Scanner s = new Scanner(f);
         int index = 0;
-        while(s.hasNextLine()) {
+        while(s.hasNext()) {
             int[] dogs = new int[24];
 
             for (int i = 0; i < dogs.length; i++) {
-                dogs[i] = s.nextInt();
+                int dog = s.nextInt();
+                dogs[i] = dog;
             }
             companies[index] = new DogWalkCompany(dogs);
             index++;
         }
         DogWalker[] walkers = new DogWalker[(int)Math.pow(10,4)];
-        f = new File("Walker.txt");
+        f = new File("Walkers.txt");
         s = new Scanner(f);
         index = 0;
         while (s.hasNextLine()) {
